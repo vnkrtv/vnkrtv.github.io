@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta itemprop="image" content="image/favicon/favicon-96x96.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="vnkrtv">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/favicon/favicon-96x96.png">
+
+    <link rel="shortcut icon" href="image/favicon/favicon.ico"/>
+
+    <title>vnkrtv</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cards.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top nav-back">
+    <div class="container">
+      <span class="navbar-brand">
+        <img src="image/favicon/favicon-96x96.png" width="26" height="26" class="mr-2">
+        <strong>vnkrtv</strong>
+     </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a id="main-link" class="nav-link" href='#top'>About
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="projects-link" class="nav-link" href='#projects'>Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a id="contacts-link" class="nav-link" href='#contacts'>Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header" id='top'>
+    <div class="overlay">
+        <div class="carousel-caption text-left">
+            <h1>Hello, world!</h1>
+            <p>I am a beginner ML Engineer & Backend Developer.<br>
+                Programming on Python, C++, Go and a bit JS.<br>
+                Administer my own Linux server.<br>
+                Here some of my projects <u><a href='#projects' style="color: black;">below</a></u></p>
+        </div>
+    </div>
+</header>
+
+<section id="team" class="pb-5">
+    <div class="container" id='projects'>
+        <h1 class="text-center">Projects</h1><br>
+<!--        <div id="chartdiv"></div>-->
+        <div class="row" id='projectsDiv'></div>
+    </div>
+</section>
+
+<footer class="py-5 nav-back">
+    <div class="contacts" id='contacts'>
+        <h1 class="text-center">Contacts</h1>
+        <div class="container">
+            <div class="container">
+                <p class="text-center">You can contact me in telegram at any time.<br>
+                    There is also my github link with all projects.</p>
+                <div class="icon-container text-center">
+                    <a href="https://t.me/vnkrtv"><img src="image/icons/tg.svg"></a>
+                    <a href="https://github.com/vnkrtv"><img src="image/icons/github.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--<style>-->
+<!--    #chartdiv {-->
+<!--        width: 100%;-->
+<!--        height: 600px;-->
+<!--    }-->
+<!--</style>-->
+<!-- Resources -->
+<!--<script src="https://cdn.amcharts.com/lib/4/core.js"></script>-->
+<!--<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>-->
+<!--<script src="https://cdn.amcharts.com/lib/4/plugins/wordCloud.js"></script>-->
+<!--<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>-->
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    let scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 300,
+        speedAsDuration: true
+    });
+
+    let projects = getJSON('data/projects.json');
+    let tags = getTags(projects)
+    renderProjects(projects);
+</script>
+
+</body>
+
+</html>
