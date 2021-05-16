@@ -245,18 +245,6 @@
     "github_name": "cmd-vk-tracker"
   },
   {
-    "name": "wifi-detect",
-    "image": "image/langs/cpp-logo.png",
-    "front_description": "Small console application for detecting Wi-Fi routers and connected to them devices.",
-    "back_description": "Detects wifi routers and all devices, connected to them. Also records all captured traffic in capture.pcap.",
-    "tags": [
-      "utility",
-      "c++14",
-      "cmake"
-    ],
-    "github_name": "wifi-detect"
-  },
-  {
     "name": "tf-net-analizer",
     "image": "image/langs/python-logo.jpg",
     "front_description": "Notebooks with NN classifying internet traffic.",
@@ -286,7 +274,7 @@
     "name": "my-site",
     "image": "image/langs/htmp5.png",
     "front_description": "This site.",
-    "back_description": "Simple single page site.",
+    "back_description": "Simple single page site with bootstrap4 and a bit js.",
     "tags": [
       "js",
       "html5",

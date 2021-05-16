@@ -15,9 +15,9 @@ function getJSON(url) {
 
 function getProjectDiv(project) {
     let projectRef = (project.ref !== undefined) ?
-        '<li className="list-inline-item">' +
-        '<a href="{{ project.ref }}"><img src="image/icons/ref.svg"></a>' +
-        '</li>' : '';
+        `<li class="list-inline-item">
+            <a href="${project.ref}"><img src="image/icons/ref.svg"></a>
+         </li>` : '';
     let tags = '';
     for (let tag of project.tags) {
         tags += `<span class="badge badge-dark">${tag}</span>&nbsp;`;
