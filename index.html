@@ -115,10 +115,11 @@
         speed: 300,
         speedAsDuration: true
     });
-
-    let projects = getJSON('data/projects.json');
-    let tags = getTags(projects)
-    renderProjects(projects);
+    fetch('data/projects.json')
+	.then(res => res.json())
+	.then(projects => renderProjects(projects))
+    ;
+    // const tags = getTags(projects);
 </script>
 
 </body>

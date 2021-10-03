@@ -1,18 +1,3 @@
-function getJSON(url) {
-    let request = new XMLHttpRequest();
-    let response;
-    request.open('GET', url, false);
-    request.onload = function () {
-        if (request.status >= 200 && request.status < 400) {
-            response = JSON.parse(request.responseText);
-        } else {
-            console.log(`Error on '${url}' request - status:` + request.status);
-        }
-    };
-    request.send();
-    return response;
-}
-
 function getProjectDiv(project) {
     let projectRef = (project.ref !== undefined) ?
         `<li class="list-inline-item">
