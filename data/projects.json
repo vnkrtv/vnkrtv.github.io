@@ -3,7 +3,7 @@
     "name": "web-testing-tool",
     "image": "image/langs/python-logo.jpg",
     "front_description": "Students testing tool.",
-    "back_description": "Testing tool implemented on Django. Data storage is implemented in the DBMS MongoDB.",
+    "back_description": "Testing tool implemented on Django. Data storage is implemented in the DBMS PostgreSQL.",
     "tags": [
       "web",
       "python",
@@ -13,7 +13,7 @@
       "django",
       "web sockets",
       "rest api",
-      "mongo",
+      "postgres",
       "docker",
       "travis ci",
       "github actions"
