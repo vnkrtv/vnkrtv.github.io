@@ -38,6 +38,23 @@
     "github_name": "video-tracker"
   },
   {
+    "name": "messenger-api",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Messenger API on aiohttp.",
+    "back_description": "Backend for simple messenger written on aiohttp. Supports messages full text search, custom authorization and caching.",
+    "tags": [
+      "python",
+      "aiohttp",
+      "postgres",
+      "fts",
+      "redis",
+      "rabbitmq",
+      "nginx",
+      "gitlab-ci"
+    ],
+    "github_name": "messenger-api"
+  },
+  {
     "name": "smart-text-editor",
     "image": "image/langs/python-logo.jpg",
     "front_description": "Text editor with intelligent typing based on relevant search in Elasticsearch.",
