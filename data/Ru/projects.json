@@ -1,0 +1,302 @@
+[
+  {
+    "name": "web-testing-tool",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Система тестирования",
+    "back_description": "Система тестирования, реализованная на Django. В качестве БД используется PostgreSQL.",
+    "tags": [
+      "web",
+      "python",
+      "html5",
+      "js",
+      "bootstrap4",
+      "django",
+      "web sockets",
+      "rest api",
+      "postgres",
+      "docker",
+      "travis ci",
+      "github actions"
+    ],
+    "github_name": "web-testing-tool"
+  },
+  {
+    "name": "video-tracker",
+    "image": "image/langs/cpp-logo.png",
+    "front_description": "Определение скорости обьектов с использованием OpenCV",
+    "back_description": "Приложение, позволяющее отслеживать обьекты в видеопотоке и на основании этого определять их скорость",
+    "tags": [
+      "c++17",
+      "computer vision",
+      "cmake",
+      "opencv",
+      "dlib",
+      "mobile net ssd",
+      "video detection",
+      "video tracking"
+    ],
+    "github_name": "video-tracker"
+  },
+  {
+    "name": "messenger-api",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "API мессенджера on aiohttp",
+    "back_description": "Бэкенд для месседжера, написанный на aiohttp. Поддерживает полнотекстовый поиск по сообщениям, кеширование запросов и самописаную авторизацию.",
+    "tags": [
+      "python",
+      "aiohttp",
+      "postgres",
+      "fts",
+      "redis",
+      "rabbitmq",
+      "nginx",
+      "gitlab-ci"
+    ],
+    "github_name": "messenger-api"
+  },
+  {
+    "name": "smart-text-editor",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Текстовый редактор с поддержкой предиктивного ввода текста на заданную тематику",
+    "back_description": "Веб приложение, обеспечивающее редактирование текстовых документов с поддержкой предиктивного ввода текста на заданную тематику. Предиктивный ввод обеспечивается за счет Elasticsearch.",
+    "tags": [
+      "web",
+      "python",
+      "flask",
+      "rest api",
+      "elasticsearch",
+      "docker",
+      "travis ci",
+      "github actions"
+    ],
+    "github_name": "smart-text-editor"
+  },
+  {
+    "name": "vk-news-dashboard",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Информационный дашборд со статистикой по новостным группам ВК",
+    "back_description": "Простой дашборд, реализованный на Dash. Обеспечивает мониторинг постов с новостных групп ВК - выявлением именованных сущностей в новостях, сбор статистики по лайкам/репостам и просмотрам.",
+    "tags": [
+      "web",
+      "python",
+      "dash",
+      "nlp",
+      "postgres",
+      "docker",
+      "docker compose",
+      "travis ci"
+    ],
+    "github_name": "vk-news-dashboard",
+    "ref": "http://vknews.vnkrtv.ru/"
+  },
+  {
+    "name": "vk-tracker",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Веб приложение для трекинга, анализа, мониторинга и поиска людей в ВК",
+    "back_description": "Веб приложение, обеспечивающее трекинг пользователей ВК. Реализовано на Django и Dash, данные хранятся в MongoDB и Neo4j.",
+    "tags": [
+      "web",
+      "python",
+      "html5",
+      "js",
+      "bootstrap4",
+      "django",
+      "dash",
+      "mongo",
+      "neo4j",
+      "docker",
+      "docker compose",
+      "travis ci",
+      "github actions",
+      "vk api"
+    ],
+    "github_name": "vk-tracker"
+  },
+  {
+    "name": "go-vk-news-loader",
+    "image": "image/langs/go-logo.png",
+    "front_description": "Сервис, обеспечивающий выкачивание постов из новостных групп ВК",
+    "back_description": "Сервис, обеспечивающий выкачивание постов из новостных групп ВК в PostgreSQL.",
+    "tags": [
+      "microservice",
+      "go",
+      "postgres",
+      "docker",
+      "docker compose",
+      "travis ci"
+    ],
+    "github_name": "go-vk-news-loader"
+  },
+  {
+    "name": "telegram-channels-loader",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Сервис, обеспечивающий выкачивание постов из телеграмм каналов",
+    "back_description": "Сервис, обеспечивающий выкачивание постов из телеграмм каналов в PostgreSQL.",
+    "tags": [
+      "microservice",
+      "python",
+      "telegram",
+      "async",
+      "postgres",
+      "docker",
+      "docker compose",
+      "travis ci"
+    ],
+    "github_name": "telegram-channels-loader"
+  },
+  {
+    "name": "tiktok-loader",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Сервис, обеспечивающий выкачивание постов из TikTok",
+    "back_description": "Сервис получает информацию о самых популярных тиктокерах рунета. После чего с заданной периодичностью выгружает их тиктоки с аудио и видео в PostgreSQL.",
+    "tags": [
+      "microservice",
+      "python",
+      "tiktok",
+      "postgres",
+      "docker",
+      "docker compose",
+      "travis ci"
+    ],
+    "github_name": "tiktok-loader"
+  },
+  {
+    "name": "web-library",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Веб приложение, обеспечивающее загрузку переводов произведений различных авторов",
+    "back_description": "Приложение обеспечивает работу с переводами произведений различных авторов. Данные хранятся в PostgreSQL, приложение реализовано на Django.",
+    "tags": [
+      "web",
+      "python",
+      "html5",
+      "js",
+      "docker",
+      "docker compose",
+      "travis ci",
+      "github actions"
+    ],
+    "github_name": "web-library"
+  },
+  {
+    "name": "go-habr-loader",
+    "image": "image/langs/go-logo.png",
+    "front_description": "Утилита, выгружающая все посты с ресурса habr.com.",
+    "back_description": "Утилита путем веб скрабинга обеспечивает получение постов с habr.com, после чего загружает их в PostgreSQL",
+    "tags": [
+      "utility",
+      "go",
+      "postgres",
+      "docker",
+      "travis ci"
+    ],
+    "github_name": "go-habr-loader",
+    "ref": "https://www.kaggle.com/leadness/habr-posts/"
+  },
+  {
+    "name": "postgres-markov-chain",
+    "image": "image/langs/plpgsql.png",
+    "front_description": "Генератор текста на основе цепей Маркова",
+    "back_description": "Генератор текста на основе цепей Маркова, написанный на чистом PL/pgSQL. Обеспечивает предобработку текста, обучение Марковских цепей и генерацию текста.",
+    "tags": [
+      "utility",
+      "plpgsql",
+      "nlp"
+    ],
+    "github_name": "postgres-markov-chain"
+  },
+  {
+    "name": "go-wiki-parser",
+    "image": "image/langs/go-logo.png",
+    "front_description": "Утилита, обеспечивающая парсинг дампов википедии с последующей загрузкой в MongoDB",
+    "back_description": "Утилита, обеспечивающая парсинг дампов википедии с последующей загрузкой в MongoDB. Каждая статья представляет собой словарь подтем со списком ссылок на другие упомянутые статьи.",
+    "tags": [
+      "utility",
+      "go",
+      "travis ci"
+    ],
+    "github_name": "go-wiki-parser"
+  },
+  {
+    "name": "web-db-manager",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "Веб приложение для работы с БД MS SQL Server",
+    "back_description": "Веб приложение для работы с предметной областью веб магазина. Хранение данных реализовано в MS SQL Server",
+    "tags": [
+      "web",
+      "python",
+      "html5",
+      "js",
+      "flask",
+      "mssql server",
+      "travis ci"
+    ],
+    "github_name": "web-db-manager"
+  },
+  {
+    "name": "matrix-multiplier",
+    "image": "image/langs/cpp-logo.png",
+    "front_description": "Программа, вычисляющая все возможные произведения векторов в заданной матрице",
+    "back_description": "Программа, вычисляющая все возможные произведения векторов в заданной матрице с заданным пороговым значением и возвращающая конечные валидные векторы.",
+    "tags": [
+      "utility",
+      "c++14",
+      "libtorch",
+      "qt5",
+      "map reduce",
+      "cmake",
+      "cuda"
+    ],
+    "github_name": "matrix-multiplier"
+  },
+  {
+    "name": "cmd-vk-tracker",
+    "image": "image/langs/cpp-logo.png",
+    "front_description": "Консольное приложение, обеспечивающее мониторинг пользователей ВК",
+    "back_description": "Консольное приложение, обеспечивающее мониторинг пользователей ВК - получение информации об аккаунте, его изменениях, а также враимосвязях с другими пользователями.",
+    "tags": [
+      "utility",
+      "c++14",
+      "cmake",
+      "vk api"
+    ],
+    "github_name": "cmd-vk-tracker"
+  },
+  {
+    "name": "tf-net-analizer",
+    "image": "image/langs/python-logo.jpg",
+    "front_description": "ИНС, обеспечивающая выявление вредоностного интернет трафика",
+    "back_description": "Тетради с ИНС, классифицирующими интернет трафик на основе данных KDD Cup 1999. ИНС реализованы на TensowFlow.",
+    "tags": [
+      "data science",
+      "python",
+      "tensorflow",
+      "sklearn",
+      "jupyter notebook"
+    ],
+    "github_name": "tf-net-analizer",
+    "ref": "https://www.kaggle.com/leadness/knncup99-ffnn-0-96-acc-0-57-weighted-acc"
+  },
+  {
+    "name": "go-tcp-chat",
+    "image": "image/langs/go-logo.png",
+    "front_description": "Простой TCP чат с tui",
+    "back_description": "Простой TCP чат на сокетах с текстовым пользовательским интерфейсом.",
+    "tags": [
+      "microservice",
+      "go"
+    ],
+    "github_name": "go-tcp-chat"
+  },
+  {
+    "name": "my-site",
+    "image": "image/langs/htmp5.png",
+    "front_description": "Этот сайт",
+    "back_description": "Простой одностраничник на bootstrap4 и чистом js.",
+    "tags": [
+      "js",
+      "html5",
+      "bootstrap4"
+    ],
+    "github_name": "vnkrtv.github.io"
+  }
+]

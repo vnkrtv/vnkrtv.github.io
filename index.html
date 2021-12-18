@@ -46,15 +46,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a id="main-link" class="nav-link" href='#top'>About
-                        <span class="sr-only">(current)</span>
-                    </a>
+                    <a id="main-link" class="nav-link" href='#top'></a>
                 </li>
                 <li class="nav-item">
-                    <a id="projects-link" class="nav-link" href='#projects'>Projects</a>
+                    <a id="projects-link" class="nav-link projects-text" href='#projects'></a>
                 </li>
                 <li class="nav-item">
-                    <a id="contacts-link" class="nav-link" href='#contacts'>Contacts</a>
+                    <a id="contacts-link" class="nav-link contacts-text" href='#contacts'></a>
+                </li>
+                <li class="nav-item">
+                    <a id="lang" class="nav-link" style="cursor: pointer;" onclick="switchLang()">Ru</a>
                 </li>
             </ul>
         </div>
@@ -65,29 +66,25 @@
     <div class="overlay">
         <div class="carousel-caption text-left">
             <h1>Hello, world!</h1>
-            <p>I am backend developer, a bit ML engineer.<br>
-                Programming on Python, C++, Go and vanilla JS.<br>
-                Administer my own Linux server.<br>
-                Here some of my projects <u><a href='#projects' style="color: black;">below</a></u></p>
+            <p id="mainInfo"></p>
         </div>
     </div>
 </header>
 
 <section id="team" class="pb-5">
     <div class="container" id='projects'>
-        <h1 class="text-center">Projects</h1><br>
-<!--        <div id="chartdiv"></div>-->
+        <h1 class="text-center projects-text"></h1><br>
+        <!--        <div id="chartdiv"></div>-->
         <div class="row" id='projectsDiv'></div>
     </div>
 </section>
 
 <footer class="py-5 nav-back">
     <div class="contacts" id='contacts'>
-        <h1 class="text-center">Contacts</h1>
+        <h1 class="text-center contacts-text"></h1>
         <div class="container">
             <div class="container">
-                <p class="text-center">You can contact me in telegram at any time.<br>
-                    There is also my github link with all projects.</p>
+                <p id="footer" class="text-center"></p>
                 <div class="icon-container text-center">
                     <a href="https://t.me/vnkrtv"><img src="image/icons/tg.svg"></a>
                     <a href="https://github.com/vnkrtv"><img src="image/icons/github.svg"></a>
@@ -115,11 +112,7 @@
         speed: 300,
         speedAsDuration: true
     });
-    fetch('data/projects.json')
-	    .then(res => res.json())
-	    .then(projects => renderProjects(projects))
-    ;
-    // const tags = getTags(projects);
+    renderPage()
 </script>
 
 </body>

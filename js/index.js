@@ -1,4 +1,4 @@
-function getProjectDiv(project) {
+function getProjectDiv(project, lang) {
     let projectRef = (project.ref !== undefined) ?
         `<li class="list-inline-item">
             <a href="${project.ref}"><img src="image/icons/ref.svg"></a>
@@ -26,7 +26,7 @@ function getProjectDiv(project) {
                         <div class="backside" onclick="">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Description</h4>
+                                    <h4 class="card-title">${lang === 'En' ? 'Description' : 'Описание'}</h4>
                                     <div class="card-text">
                                         <p>${project.back_description}</p>
                                         <p>
@@ -49,13 +49,69 @@ function getProjectDiv(project) {
     return projectDiv;
 }
 
-function renderProjects(projects) {
+async function fetchProjects(lang) {
+    return await fetch(`data/${lang}/projects.json`)
+        .then(res => res.json())
+    ;
+}
+
+async function fetchMainSiteData(lang) {
+    return await fetch(`data/${lang}/main_data.json`)
+        .then(res => res.json())
+    ;
+}
+
+function fillMainSiteData(mainData) {
+    const lang = getLang();
+
+    document.getElementById('main-link').innerHTML = lang === 'En' ? 'About' : 'Обо мне';
+    for (let el of document.getElementsByClassName('projects-text')) {
+        el.innerHTML = lang === 'En' ? 'Projects' : 'Проекты';
+    }
+    for (let el of document.getElementsByClassName('contacts-text')) {
+        el.innerHTML = lang === 'En' ? 'Contacts' : 'Контакты';
+    }
+
+    document.getElementById('mainInfo').innerHTML = mainData['mainInfo'];
+
+    document.getElementById('footer').innerHTML = mainData['footer'];
+}
+
+function renderProjects(projects, lang) {
     const projectsDiv = document.getElementById('projectsDiv');
+    projectsDiv.innerHTML = '';
     for (let project of projects) {
-        const projectDiv = getProjectDiv(project);
+        const projectDiv = getProjectDiv(project, lang);
         projectsDiv.appendChild(projectDiv);
     }
 }
+
+function getLang() {
+    return document.getElementById('lang').innerHTML;
+}
+
+function setLang(lang) {
+    document.getElementById('lang').innerHTML = lang;
+}
+
+async function renderPage() {
+    const lang = getLang();
+    const projects = await fetchProjects(lang);
+    const mainData = await fetchMainSiteData(lang);
+    renderProjects(projects, lang);
+    fillMainSiteData(mainData);
+}
+
+function switchLang() {
+    if (getLang() === 'Ru') {
+        setLang('En');
+    } else {
+        setLang('Ru');
+    }
+    renderPage();
+}
+
+
 
 function getTags(projects) {
     let tags = {};
