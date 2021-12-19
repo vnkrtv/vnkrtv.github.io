@@ -74,6 +74,8 @@
 <section id="team" class="pb-5">
     <div class="container" id='projects'>
         <h1 class="text-center projects-text"></h1><br>
+        <div id="tags-div" class="text-center h4"></div>
+        <br>
         <!--        <div id="chartdiv"></div>-->
         <div class="row" id='projectsDiv'></div>
     </div>
@@ -112,7 +114,14 @@
         speed: 300,
         speedAsDuration: true
     });
-    renderPage()
+    let projects = {};
+    let mainData = {};
+    let tags = ['all', 'python', 'c++', 'go', 'js'];
+    fetchData()
+        .then(_ => {
+            renderPage();
+            renderTags(tags);
+        });
 </script>
 
 </body>
