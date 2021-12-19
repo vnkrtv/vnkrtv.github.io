@@ -66,7 +66,7 @@ async function fetchData() {
     mainData = await fetchMainSiteData();
 }
 
-function fillMainSiteData(mainInfoData) {
+function fillMainSiteData() {
     const lang = getLang();
 
     document.getElementById('main-link').innerHTML = lang === 'En' ? 'About' : 'Обо мне';
@@ -77,9 +77,8 @@ function fillMainSiteData(mainInfoData) {
         el.innerHTML = lang === 'En' ? 'Contacts' : 'Контакты';
     }
 
-    document.getElementById('mainInfo').innerHTML = mainInfoData['mainInfo'];
-
-    document.getElementById('footer').innerHTML = mainInfoData['footer'];
+    document.getElementById('mainInfo').innerHTML = mainData[lang]['mainInfo'];
+    document.getElementById('footer').innerHTML = mainData[lang]['footer'];
 }
 
 function renderProjects(projects, lang) {
@@ -92,28 +91,28 @@ function renderProjects(projects, lang) {
 }
 
 function getLang() {
-    return document.getElementById('lang').innerHTML;
+    return document.getElementById('lang').innerHTML === 'Ru' ? 'En' : 'Ru';
 }
 
 function setLang(lang) {
-    document.getElementById('lang').innerHTML = lang;
+    document.getElementById('lang').innerHTML = lang === 'Ru' ? 'En' : 'Ru';
 }
 
 function renderPage() {
     const lang = getLang();
     const curProjects = projects[lang];
-    const mainInfoData = mainData[lang];
     renderProjects(curProjects, lang);
-    fillMainSiteData(mainInfoData);
+    fillMainSiteData();
 }
 
 function switchLang() {
-    if (getLang() === 'Ru') {
-        setLang('En');
-    } else {
+    if (getLang() === 'En') {
         setLang('Ru');
+    } else {
+        setLang('En');
     }
     filterProjectsByTags();
+    fillMainSiteData();
 }
 
 function toggleTag(tagId) {
