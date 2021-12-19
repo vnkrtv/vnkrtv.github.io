@@ -55,6 +55,12 @@ async function fetchProjects() {
     ;
 }
 
+async function fetchSkills() {
+    return await fetch(`data/skills.json`)
+        .then(res => res.json())
+    ;
+}
+
 async function fetchMainSiteData() {
     return await fetch(`data/main_data.json`)
         .then(res => res.json())
@@ -64,12 +70,16 @@ async function fetchMainSiteData() {
 async function fetchData() {
     projects = await fetchProjects();
     mainData = await fetchMainSiteData();
+    skills = await fetchSkills();
 }
 
 function fillMainSiteData() {
     const lang = getLang();
 
     document.getElementById('main-link').innerHTML = lang === 'En' ? 'About' : 'Обо мне';
+    for (let el of document.getElementsByClassName('experience-text')) {
+        el.innerHTML = lang === 'En' ? 'Experience' : 'Опыт';
+    }
     for (let el of document.getElementsByClassName('projects-text')) {
         el.innerHTML = lang === 'En' ? 'Projects' : 'Проекты';
     }
@@ -102,6 +112,7 @@ function renderPage() {
     const lang = getLang();
     const curProjects = projects[lang];
     renderProjects(curProjects, lang);
+    renderSkills();
     fillMainSiteData();
 }
 
@@ -112,6 +123,7 @@ function switchLang() {
         setLang('En');
     }
     filterProjectsByTags();
+    renderSkills();
     fillMainSiteData();
 }
 
@@ -173,6 +185,50 @@ function filterProjectsByTags() {
         return tagsIntersection.size;
     });
     renderProjects(filteredProjects, getLang());
+}
+
+function getSkillsList(skillsList) {
+    let skillsUl = '<ul>';
+    for (let skill of skillsList) {
+        skillsUl += `<li><h5>${skill}</h5></li>`;
+    }
+    return skillsUl + '</ul>';
+}
+
+function getSkillDiv(skillName, skillId, skillsList) {
+    const skillDiv = document.createElement('div');
+    skillDiv.id = skillId;
+
+    skillDiv.innerHTML = `
+    <button
+            class="btn bg-transparent shadow-none"
+            data-toggle="collapse"
+            data-target="#${skillId}-list"
+            role="button"
+            aria-expanded="false"
+            aria-controls="${skillId}-list"
+    >
+        <h4>${skillName}</h4>
+    </button>
+    <div class="col">
+        <div class="collapse multi-collapse border-0" id="${skillId}-list">
+            ${getSkillsList(skillsList)}
+        </div>
+    </div>`;
+
+    return skillDiv;
+}
+
+function renderSkills() {
+    const curSkills = skills[getLang()];
+    const experienceDiv = document.getElementById('experienceDiv');
+
+    experienceDiv.innerHTML = '';
+    for (let skillName in curSkills) {
+        experienceDiv.appendChild(
+            getSkillDiv(skillName, curSkills[skillName]['id'], curSkills[skillName]['skills'])
+        );
+    }
 }
 
 // function getTags(projects) {

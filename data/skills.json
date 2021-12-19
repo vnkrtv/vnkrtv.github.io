@@ -1,0 +1,88 @@
+{
+  "Ru": {
+    "Разработка приложений": {
+      "id": "development",
+      "skills": [
+        "Разработка веб приложений на Python (Django, Flask, aiohttp, Dash)",
+        "Разработка веб приложений на PHP (Symphony)",
+        "Разработка простых сервисов на Go",
+        "Разработка и сборка приложений на C++ с использованием CMake",
+        "Развертывание приложений с использованием Docker/Docker compose и Ansible",
+        "Настройка CI/CD с использованием Gitlab/Github Actions",
+        "Работа с реляционными СУБД PostgreSQL и MySQL",
+        "Работа с NoSQL СУБД MongoDB и Neo4j"
+      ]
+    },
+    "Машинное обучение": {
+      "id": "ml",
+      "skills": [
+        "Работа с фреймворками tensorflow/pytorch/sklearn",
+        "Построение моделей классификации интернет трафика (tensorflow/sklearn)",
+        "NLP - решение задач генерации текста (GPT, марковские Цепи)",
+        "NLP - выявление именованных сущностей в тексте, оценка тональности (natasha)",
+        "Computer vision - решение задач отслеживания и трекинга обьектов (OpenCV)"
+      ]
+    },
+    "OSINT": {
+      "id": "osint",
+      "skills": [
+        "Получение данных с открытых API (ВК API)",
+        "Web scraping - получение данных с источников без API (requests, selenium)",
+        "Анализ данных с открытых источников (построние социальных графов, анализ взаимосвязей)"
+      ]
+    },
+    "Настройка и администрирование сетей": {
+      "id": "networks",
+      "skills": [
+        "Администрирование сервера с Ubuntu Server",
+        "Настройка сервисов - DNS/DHCP/почты/веб серверов apache, nginx/СУБД/прочих systemd сервисов",
+        "Настройка сетей в VMware Workstation/Virtual Box",
+        "Опыт работы с FreeBSD"
+      ]
+    }
+  },
+  "En": {
+    "Application development": {
+      "id": "development",
+      "skills": [
+        "Разработка веб приложений на Python (Django, Flask, aiohttp, Dash)",
+        "Разработка веб приложений на PHP (Symphony)",
+        "Разработка простых сервисов на Go",
+        "Разработка и сборка приложений на C++ с использованием CMake",
+        "Развертывание приложений с использованием Docker/Docker compose и Ansible",
+        "Настройка CI/CD с использованием Gitlab/Github Actions",
+        "Работа с реляционными СУБД PostgreSQL и MySQL",
+        "Работа с NoSQL СУБД MongoDB и Neo4j"
+      ]
+    },
+    "Machine learning": {
+      "id": "ml",
+      "skills": [
+        "Работа с фреймворками tensorflow/pytorch/sklearn",
+        "Построение моделей классификации интернет трафика (tensorflow/sklearn)",
+        "NLP - решение задач генерации текста (GPT, марковские Цепи)",
+        "NLP - выявление именованных сущностей в тексте, оценка тональности (natasha)",
+        "Computer vision - решение задач отслеживания и трекинга обьектов (OpenCV)"
+      ]
+    },
+    "OSINT": {
+      "id": "osint",
+      "skills": [
+        "Получение данных с открытых API (ВК API)",
+        "Web scraping - получение данных с источников без API (requests, selenium)",
+        "Анализ данных с открытых источников (построние социальных графов, анализ взаимосвязей)"
+      ]
+    },
+    "Network setup and administration": {
+      "id": "networks",
+      "skills": [
+        "Администрирование сервера с Ubuntu Server",
+        "Настройка сервисов - DNS/DHCP/почты/веб серверов apache, nginx/СУБД/прочих systemd сервисов",
+        "Настройка сетей в VMware Workstation/Virtual Box",
+        "Опыт работы с FreeBSD"
+      ]
+    }
+  }
+}
+
+
