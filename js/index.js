@@ -195,6 +195,31 @@ function getSkillsList(skillsList) {
     return skillsUl + '</ul>';
 }
 
+function getArrowDownIcon(id) {
+    return `
+    <svg 
+        id="icon-down-${id}" 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="16" height="16" 
+        fill="currentColor" 
+        class="bi bi-caret-down-fill icon-arrow" 
+        style="transition: transform .3s; transform: " 
+        viewBox="0 0 16 16"
+    >
+      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+    </svg>
+    `;
+}
+
+function toggleArrowIcon(iconId) {
+    const icon = document.getElementById(iconId);
+    if (icon.style.transform === '') {
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        icon.style.transform = '';
+    }
+}
+
 function getSkillDiv(skillName, skillId, skillsList) {
     const skillDiv = document.createElement('div');
     skillDiv.id = skillId;
@@ -207,8 +232,12 @@ function getSkillDiv(skillName, skillId, skillsList) {
             role="button"
             aria-expanded="false"
             aria-controls="${skillId}-list"
+            onclick="toggleArrowIcon('icon-down-${skillId}')"
     >
-        <h4>${skillName}</h4>
+        <h4>
+            ${getArrowDownIcon(skillId)} 
+            ${skillName}
+        </h4>
     </button>
     <div class="col">
         <div class="collapse multi-collapse border-0" id="${skillId}-list">

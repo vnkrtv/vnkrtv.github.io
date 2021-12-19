@@ -145,3 +145,9 @@ a.nav-link {
 .icon-container > a {
     margin: 1vh;
 }
+
+
+.rotate-icon {
+    transform: rotate(180deg);
+    transition: transform .3s;
+}
