@@ -4,7 +4,7 @@
     "footer": "You can contact me in telegram at any time.<br>There is also my github link with all projects."
   },
   "Ru": {
-    "mainInfo": "Я занимаюсь разработкой бэкенда и машинным обучением.<br>В основном пишу на Python, C++, Go и JS.<br>Администрирую домашним сервер на Linux.<br>Снизу приведен список некоторых моих <u><a href='#projects' style=\"color: black;\">проектов</a></u>",
+    "mainInfo": "Я занимаюсь разработкой бэкенда и машинным обучением.<br>В основном пишу на Python, C++, Go и JS.<br>Администрирую домашний сервер на Linux.<br>Снизу приведен список некоторых моих <u><a href='#projects' style=\"color: black;\">проектов</a></u>",
     "footer": "Со мной можно связаться в любое время в телеграмме.<br>Все проекты также доступны на моем гитхабе."
   }
 }
