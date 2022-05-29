@@ -36,11 +36,9 @@
     "Настройка сетей": {
       "id": "networks",
       "skills": [
-        "Администрирование сервера с Ubuntu Server",
         "Настройка сервисов - DNS/DHCP/почты/веб серверов apache, nginx/СУБД/прочих systemd сервисов",
         "Настройка сетей в VMware Workstation/Virtual Box",
-        "Анализ сетевого трафика (Wireshark, tcpdump)",
-        "Опыт работы с FreeBSD"
+        "Анализ сетевого трафика (Wireshark, tcpdump)"
       ]
     }
   },
@@ -48,44 +46,42 @@
     "Application development": {
       "id": "development",
       "skills": [
-        "Разработка веб приложений на Python (Django, Flask, aiohttp, Dash)",
-        "Разработка веб приложений на PHP (Symphony)",
-        "Разработка простых сервисов на Go",
-        "Разработка и сборка приложений на C++ с использованием CMake",
-        "Развертывание приложений с использованием Docker/Docker compose и Ansible",
-        "Настройка CI/CD с использованием Gitlab/Github Actions",
-        "Работа с реляционными СУБД PostgreSQL и MySQL",
-        "Работа с NoSQL СУБД MongoDB и Neo4j",
-        "Работа с поисковой системой Elasticsearch"
+        "Web apps development on Python (Django, Flask, aiohttp, Dash)",
+        "Web apps development on PHP (Symphony)",
+        "Development on Go",
+        "Utilities developments on C++",
+        "Deployment via Docker/Ansible",
+        "CI/CD with Gitlab/Github Actions",
+        "Work with relational DBMS PostgreSQL/MySQL DBMS",
+        "Work with NoSQL DBMS MongoDB/Neo4j",
+        "Work with ELK stack (Elasticsearch/Kibana/Logstash)"
       ]
     },
     "Machine learning": {
       "id": "ml",
       "skills": [
-        "Работа с фреймворками tensorflow/pytorch/sklearn",
-        "Построение моделей классификации интернет трафика (tensorflow/sklearn)",
-        "NLP - решение задач генерации текста (GPT, марковские Цепи)",
-        "NLP - выявление именованных сущностей в тексте, оценка тональности (natasha)",
-        "Computer vision - решение задач отслеживания и трекинга обьектов (OpenCV)"
+        "Work with tensorflow/pytorch/sklearn",
+        "Building Internet traffic classification models via tensorflow/sklearn",
+        "Solving text generation NLP problem via GPT and Markov chains",
+        "Identified named entities in the text, assessment their tonality via natasha",
+        "Solving computer vision problems of tracking objects via OpenCV"
       ]
     },
     "OSINT": {
       "id": "osint",
       "skills": [
-        "Получение данных с открытых API (ВК API)",
-        "Web scraping - получение данных с источников без API (requests, selenium)",
-        "Анализ данных с открытых источников (построние социальных графов, анализ взаимосвязей)",
-        "Автоматизация процесса получения/обновления данных с открытых источников"
+        "Work with open APIs (such as VK API)",
+        "Web scraping - getting data from sources without API via requests/selenium",
+        "Analysis of data from open sources (construction of social graphs, analysis of relationships)",
+        "Automation of the process of obtaining/updating data from open sources"
       ]
     },
-    "Network setup": {
+    "Networks": {
       "id": "networks",
       "skills": [
-        "Администрирование сервера с Ubuntu Server",
-        "Настройка сервисов - DNS/DHCP/почты/веб серверов apache, nginx/СУБД/прочих systemd сервисов",
-        "Настройка сетей в VMware Workstation/Virtual Box",
-        "Анализ сетевого трафика (Wireshark, tcpdump)",
-        "Опыт работы с FreeBSD"
+        "Configuring services - DNS/DHCP/mail/apache web servers, nginx/DBMS/other systemd services",
+        "Setting up Virtual Networks in VMware Workstation/Virtual Box",
+        "Network traffic analysis via Wireshark/tcpdump"
       ]
     }
   }
